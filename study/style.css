@@ -1,13 +1,23 @@
 /* !!!!!!!@font-face */
 
-/* @font-face {
+ /* @font-face {
   font-family: "MyCustomFont";
   src: 
-  url("./fonts/BitcountGridDouble-Regular.woff") format("woff2"),
+  url("./fonts/BitcountGridDouble-Regular.woff2") format("woff2"),
     url("./fonts/BitcountGridDouble-Regular.woff") format("woff"),
-    url("./fonts/BitcountGridDouble-Regular.ttf") format("truetype");;
+    url("./fonts/BitcountGridDouble-Regular.ttf") format("truetype");
+   }  */
+/* 
+   @font-face {
+    font-family: "Roboto Nostro";
+    src: url(./fonts/RobotoCondensed-Regular.woff2)
+    format("woff2")     
    } */
 
+   @font-face {
+    font-family: "Inter";
+    src: url(./fonts/Inter.woff2) format("woff2");
+   }
 
 
    /* !!!!!!!!!!!!!!@import */
@@ -15,72 +25,14 @@
    /* @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap'); */
 
 
+   /* h1 {
+    font-family: MyCustomFont;
+   } */
 
+   p {
+    font-family: 'Roboto Nostro';
+   }
 
-
-/*!!!!!!!!! font-family */
-
-h1 {
-  font-family: serif;
-}
-
-h3 {
-  font-family: sans-serif;
-}
-
-p {
-  font-family: Arial;
-  /* font-family: 'Cascadia Code'; */
-  /* font-family: 'Times New Roman', Verdana, serif; */
-}
-
-/* !!!!!!!!!!!!font-weight */
-
-/* span {
-  font-weight: bold;
-  font-weight: 700;
-}
-
-p {
-  font-weight: lighter;
-  font-weight: 100;
-} */
-
-/* !!!!!!!!!!font-style */
-/* 
-h1 {
-  font-style: italic;
-}
-
-h3 {
-  font-style: normal;
-} */
-
-/* !!!!!!!!!text-transform: */
-
-/* h1 {
-  text-transform: uppercase;
-}
-
-h3 {
-  text-transform: lowercase;
-}
-
-p {
-  text-transform: capitalize;
-} */
-
-/* !!!!!!!!!Text Layout */
-
-/* h1 {
-  letter-spacing: 10px;
-} */
-
-/* p {
-  word-spacing: 20px;
-  line-height: 1.5;
-}  */
-
-/* h3 {
-  text-align: right; 
-} */
+   h1 {
+    font-family: Inter;
+   }
