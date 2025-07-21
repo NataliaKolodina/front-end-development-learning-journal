@@ -11,7 +11,6 @@ ESERCIZIO 1: Impostare un’età valida
 5. Stampa `user._age` di nuovo. // Risultato atteso: 30
 ====================================== */
 
-
 /* ======================================
 ESERCIZIO 2: Controllo di lunghezza del titolo
 1. Crea un oggetto `movie` con una proprietà `_title` impostata a 'Matrix'.
@@ -24,18 +23,32 @@ ESERCIZIO 2: Controllo di lunghezza del titolo
 5. Imposta `movie.title = 'Inception'`, poi stampa `movie._title`. // Risultato atteso: Inception
 ====================================== */
 
-
 const user = {
-   _age: 25,
-   set age(value) {
-      if(typeof value === 'number') {
-         this._age = value;
-      } else {
-         console.log('Invalid age value');
-      }
-   }
-}
+  _age: 25,
+  set age(value) {
+    if (typeof value === "number") {
+      this._age = value;
+    } else {
+      console.log("Invalid age value");
+    }
+  },
+};
 user.age = 30;
 console.log(user._age);
-user.age = 'trenta';
+user.age = "trenta";
 console.log(user._age);
+
+const movie = {
+  _title: "Matrix",
+  set title(value) {
+    if (typeof value === "string" && value.length >= 4) {
+      this._title = value;
+    } else {
+      console.log("Titolo non valido");
+    }
+  },
+};
+movie.title = "Up";
+console.log(movie._title);
+movie.title = "Inception";
+console.log(movie._title);
