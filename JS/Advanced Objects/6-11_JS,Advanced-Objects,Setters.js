@@ -25,3 +25,17 @@ ESERCIZIO 2: Controllo di lunghezza del titolo
 ====================================== */
 
 
+const user = {
+   _age: 25,
+   set age(value) {
+      if(typeof value === 'number') {
+         this._age = value;
+      } else {
+         console.log('Invalid age value');
+      }
+   }
+}
+user.age = 30;
+console.log(user._age);
+user.age = 'trenta';
+console.log(user._age);
