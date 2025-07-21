@@ -22,3 +22,16 @@ ESERCIZIO 2: Creare un secondo robot con parametri diversi
 5. Stampa `robot2.id`. // Risultato atteso: 202
 ====================================== */
 
+const robotFactory = (id, model, energyLevel, speakMessage) => {
+   return {
+      id: id,
+      model: model,
+      energyLevel: energyLevel,
+      speak() {
+         console.log(speakMessage);
+      }
+   }
+}
+const robot1 = robotFactory(101, 'XR-22', 80, 'Mission ready!');
+robot1.speak();
+console.log(robot1.energyLevel);
