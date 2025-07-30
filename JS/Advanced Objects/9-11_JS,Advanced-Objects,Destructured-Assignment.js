@@ -18,4 +18,16 @@ ESERCIZIO 2: Destructuring di proprietà annidate
 4. Stampa la variabile `support`. // Risultato atteso: teletrasporto
 ====================================== */
 
-
+const wizard = {
+  name: "Merlino",
+  realm: "Avalon",
+  powers: {
+    main: "illusioni",
+    support: "teletrasporto",
+  },
+};
+const { realm } = wizard;
+console.log(realm);
+const { main, support } = wizard.powers;
+console.log(main);
+console.log(support);
