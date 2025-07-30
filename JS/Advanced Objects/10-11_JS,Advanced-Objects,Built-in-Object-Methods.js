@@ -24,4 +24,20 @@ ESERCIZIO 2: Uso di Object.keys() e Object.entries()
 6. Stampa `upgradedRobot`. // Risultato atteso: { model: 'RX-78', energyLevel: 85, upgraded: true }
 ====================================== */
 
+const robot = {
+  model: "RX-78",
+  energyLevel: 85,
+};
+const hasModel = robot.hasOwnProperty("model");
+console.log(hasModel);
+const hasSpeed = robot.hasOwnProperty("speed");
+console.log(hasSpeed);
+const robotValue = robot.valueOf();
+console.log(robotValue);
 
+const robotKeys = Object.keys(robot);
+console.log(robotKeys);
+const robotEntries = Object.entries(robot);
+console.log(robotEntries);
+const upgradedRobot = Object.assign({}, robot, { upgraded: true });
+console.log(upgradedRobot);
