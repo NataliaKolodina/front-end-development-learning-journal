@@ -29,7 +29,7 @@ const user = {
       return this._username;
    },
    set password(newPassword) {
-      if (newPassword.length > 7 && typeof newPassword === 'string') {
+      if (newPassword.length >= 6 && typeof newPassword === 'string') {
          this._password = newPassword;
       } else {
           console.log('Invalid password');
@@ -46,4 +46,8 @@ const user = {
 
 username = user.username;
 console.log(username); 
+
+user.password = '123';
+user.password = 'newpass';
+user.login();
 
