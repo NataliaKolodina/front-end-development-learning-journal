@@ -20,3 +20,27 @@ ESERCIZIO 2: Usa una funzione fabbrica con shorthand e assegnazione destrutturat
 4. Esegui il metodo `status()` sul `phone`. // Risultato atteso: 'Smartphone by Zeta has 77% battery'
 5. Usa l’assegnazione destrutturata per estrarre `brand` da `phone` e stampalo. // Risultato atteso: 'Zeta'
 ====================================== */
+
+
+const user = {
+   _username: 'developer_01',
+   _password: 'abc123',
+   get username() {
+      return this._username;
+   },
+   set password(newPassword) {
+      if (newPassword.length > 7 && typeof newPassword === 'string') {
+         this._password = newPassword;
+      } else {
+          console.log('Invalid password');
+      }
+   },
+   login() {
+      if (this._password === 'abc123') {
+         console.log("Access granted");
+      } else {
+         
+      }
+   }
+
+}
