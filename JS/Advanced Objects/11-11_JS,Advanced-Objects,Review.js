@@ -39,8 +39,11 @@ const user = {
       if (this._password === 'abc123') {
          console.log("Access granted");
       } else {
-         
+         console.log("Access denied");
       }
    }
+};
 
-}
+username = user.username;
+console.log(username); 
+
