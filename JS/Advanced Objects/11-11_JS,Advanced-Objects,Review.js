@@ -56,7 +56,7 @@ function createDevice(type, brand, batteryLevel) {
     brand,
     batteryLevel,
     status() {
-      console.log("<type> by <brand> has <batteryLevel>% battery");
+      console.log(`${type} by ${brand} has ${batteryLevel}% battery`);
     },
   };
 }
