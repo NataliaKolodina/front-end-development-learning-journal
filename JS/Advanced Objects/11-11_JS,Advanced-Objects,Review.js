@@ -51,3 +51,21 @@ user.password = '123';
 user.password = 'newpass';
 user.login();
 
+
+
+
+function createDevice(type, brand, batteryLevel) {
+   return {
+      type,
+      brand,
+      batteryLevel,
+      status() {
+         console.log("<type> by <brand> has <batteryLevel>% battery");
+      }
+   }
+}
+const phone = createDevice('Smartphone', 'Zeta', 77);
+phone.status();
+const { brand } =phone;
+console.log(brand); 
+
