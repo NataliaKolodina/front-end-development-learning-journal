@@ -21,51 +21,46 @@ ESERCIZIO 2: Usa una funzione fabbrica con shorthand e assegnazione destrutturat
 5. Usa l’assegnazione destrutturata per estrarre `brand` da `phone` e stampalo. // Risultato atteso: 'Zeta'
 ====================================== */
 
-
 const user = {
-   _username: 'developer_01',
-   _password: 'abc123',
-   get username() {
-      return this._username;
-   },
-   set password(newPassword) {
-      if (newPassword.length >= 6 && typeof newPassword === 'string') {
-         this._password = newPassword;
-      } else {
-          console.log('Invalid password');
-      }
-   },
-   login() {
-      if (this._password === 'abc123') {
-         console.log("Access granted");
-      } else {
-         console.log("Access denied");
-      }
-   }
+  _username: "developer_01",
+  _password: "abc123",
+  get username() {
+    return this._username;
+  },
+  set password(newPassword) {
+    if (newPassword.length >= 6 && typeof newPassword === "string") {
+      this._password = newPassword;
+    } else {
+      console.log("Invalid password");
+    }
+  },
+  login() {
+    if (this._password === "abc123") {
+      console.log("Access granted");
+    } else {
+      console.log("Access denied");
+    }
+  },
 };
 
 username = user.username;
-console.log(username); 
+console.log(username);
 
-user.password = '123';
-user.password = 'newpass';
+user.password = "123";
+user.password = "newpass";
 user.login();
 
-
-
-
 function createDevice(type, brand, batteryLevel) {
-   return {
-      type,
-      brand,
-      batteryLevel,
-      status() {
-         console.log("<type> by <brand> has <batteryLevel>% battery");
-      }
-   }
+  return {
+    type,
+    brand,
+    batteryLevel,
+    status() {
+      console.log("<type> by <brand> has <batteryLevel>% battery");
+    },
+  };
 }
-const phone = createDevice('Smartphone', 'Zeta', 77);
+const phone = createDevice("Smartphone", "Zeta", 77);
 phone.status();
-const { brand } =phone;
-console.log(brand); 
-
+const { brand } = phone;
+console.log(brand);
